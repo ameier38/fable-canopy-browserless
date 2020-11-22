@@ -1,0 +1,20 @@
+{
+  "private": true,
+  "scripts": {
+    "serve": "webpack-dev-server --mode development --entry ./src/App/App.fsproj",
+    "build": "webpack --mode production --entry ./src/App/App.fsproj"
+  },
+  "dependencies": {
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "fable-compiler": "^2.13.0",
+    "fable-loader": "^2.1.9",
+    "file-loader": "^6.0.0",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}

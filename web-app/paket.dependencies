@@ -1,0 +1,21 @@
+version 5.257.0
+
+storage none
+source https://api.nuget.org/v3/index.json
+
+nuget canopy
+nuget Fable.Core
+nuget Fable.Browser.Dom
+nuget Feliz
+nuget FSharp.Core 4.7.2
+nuget Selenium.WebDriver.ChromeDriver 87.0.4280.2000
+
+// [ FAKE GROUP ]
+group Build
+    storage none
+    source https://api.nuget.org/v3/index.json
+    nuget Fake.DotNet.Cli
+    nuget Fake.IO.FileSystem
+    nuget Fake.Core.Target
+    nuget FSharp.Core 4.7.2
+    nuget BlackFox.Fake.BuildTask
