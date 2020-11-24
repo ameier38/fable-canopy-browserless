@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "webpack-dev-server --mode development --entry ./src/Client/Client.fsproj",
+    "build": "webpack --mode production --entry ./src/Client/Client.fsproj"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "fable-compiler": "^2.13.0",
+    "fable-loader": "^2.1.9",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.5.0",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}

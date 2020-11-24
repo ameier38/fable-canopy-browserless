@@ -1,0 +1,20 @@
+@startuml system
+!includeurl https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+Container(tester, "Tester", "F#, canopy", "Runs integration tests")
+Container(chrome, "Chrome", "Chrome, browerless", "Headless web browser")
+System_Boundary(system, "Fable + canopy + browserless") {
+    Container(web_server, "Web Server", "NGINX", "Serves static content (SPA)")
+    Container(spa, "SPA", "F#, Fable, React")
+    Container(proxy, "Proxy", "NGINX", "Routes traffic")
+    Container(backend, "Backend Server", "F#, Suave")
+}
+Rel(tester, chrome, "HTTP", "Interacts with site via chromedriver")
+Rel(chrome, proxy, "HTTPS", "Requests site (HOST: client.proxy)")
+Rel(chrome, spa, "HTTPS", "Interacts with")
+Rel(proxy, web_server, "HTTPS", "Routes client.proxy to")
+Rel(proxy, backend, "HTTPS", "Routes server.proxy to")
+Rel(spa, proxy, "HTTPS", "Makes API calls (HOST: server.proxy)")
+
+
+@enduml

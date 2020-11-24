@@ -1,9 +1,0 @@
-.fake
-.ionide
-.paket
-node_modules
-paket-files
-bin
-obj
-dist
-out

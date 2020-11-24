@@ -1,0 +1,7 @@
+.vscode
+.idea
+.ionide
+.fable
+.paket
+bin
+obj
