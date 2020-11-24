@@ -20,4 +20,4 @@ RUN \
     # NB: initialize the certificate store
     && certutil -d $HOME/.pki/nssdb -N \
     # NB: add our self signed certificate as trusted certificate authority
-    && certutil -d sql:$HOME/.pki/nssdb -A -t "C,," -n cosmicdealership -i /var/ssl/ca.crt
+    && certutil -d sql:$HOME/.pki/nssdb -A -t "C,," -n dev -i /var/ssl/ca.crt

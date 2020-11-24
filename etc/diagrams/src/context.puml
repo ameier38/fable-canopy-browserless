@@ -2,7 +2,7 @@
 !includeurl https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
 
 Container(tester, "Tester", "F#, canopy", "Runs integration tests")
-Container(chrome, "Chrome", "Chrome, browerless", "Headless web browser")
+Container(chrome, "Chrome", "Chrome, browserless", "Headless web browser")
 System_Boundary(system, "Fable + canopy + browserless") {
     Container(web_server, "Web Server", "NGINX", "Serves static content (SPA)")
     Container(spa, "SPA", "F#, Fable, React")

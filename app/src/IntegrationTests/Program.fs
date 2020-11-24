@@ -23,7 +23,6 @@ let startApp () =
 
 "test increment and decrement" &&& fun _ ->
     startApp()
-    sleep 10
     describe "waiting for count to load..."
     waitFor (fun () ->
         let count = read "#count"
